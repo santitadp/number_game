@@ -7,18 +7,22 @@
 # If the guess is correct, then print "NAILED IT!!!". The program must then exit immediately.
 # If the user does not guess the number after 5 guesses, then print "You lose! I win! Womp womp!”
 
-answer = 3
+answer = 1 + rand(10)
+x = 0
 
-print "Pick a number between 1 and 10:  "
-guess = gets.chomp.to_i
-
-
-if guess < answer
-	print "Too low!"
-elsif guess > answer
-	print "Too high!"
-else
-	print "NAILED IT!!!"
+while x = x + 1 and x <= 5 do
+	print "Pick a number between 1 and 10:  "
+	guess = gets.chomp.to_i
+	if
+		answer < guess
+		print "Too high!!\n"
+	elsif
+		answer > guess
+		print "Too low!\n"
+	else
+		print "NAILED IT!!!\n"
+		exit
+	end
 end
 
-exit
+print "You lose! I win! Womp womp!\n"
