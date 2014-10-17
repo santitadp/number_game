@@ -12,8 +12,7 @@ Welcome to the NUMBER GAME!
 
 You guess a number, and we'll see if it's correct.
 First off, let's pick a range.
-What would you like to be your highest range?
-"""
+What would you like to be your highest range?  """
 high = gets.chomp.to_i
 
 print "How about lowest range?  "
