@@ -7,11 +7,24 @@
 # If the guess is correct, then print "NAILED IT!!!". The program must then exit immediately.
 # If the user does not guess the number after 5 guesses, then print "You lose! I win! Womp womp!”
 
-answer = 1 + rand(10)
+print """
+Welcome to the NUMBER GAME!
+
+You guess a number, and we'll see if it's correct.
+First off, let's pick a range.
+What would you like to be your highest range?
+"""
+high = gets.chomp.to_i
+
+print "How about lowest range?  "
+low = gets.chomp.to_i
+
+range = high - low
+answer = rand(range)
 x = 0
 
 while x = x + 1 and x <= 5 do
-	print "Pick a number between 1 and 10:  "
+	print "Guess the number:  "
 	guess = gets.chomp.to_i
 	if
 		answer < guess
@@ -25,4 +38,4 @@ while x = x + 1 and x <= 5 do
 	end
 end
 
-print "You lose! I win! Womp womp!\n"
+print "You lose! I win! Womp womp! The answer is #{answer}.\n"
