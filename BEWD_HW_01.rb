@@ -12,6 +12,7 @@ answer = 3
 print "Pick a number between 1 and 10:  "
 guess = gets.chomp.to_i
 
+
 if guess < answer
 	print "Too low!"
 elsif guess > answer
