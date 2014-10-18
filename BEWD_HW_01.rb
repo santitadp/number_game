@@ -11,14 +11,21 @@ print """
 Welcome to the NUMBER GAME!
 
 You guess a number, and we'll see if it's correct.
-First off, let's pick a range.
-What would you like to be your highest range?  """
+First off, let's pick a range. """
+
+print "What would you like to be your highest range?  "
 high = gets.chomp.to_i
 
 print "How about lowest range?  "
 low = gets.chomp.to_i
 
-range = high - low
+while low > high or low == high
+	print "Stop goofing around.\n"
+	print "Seriously, pick a low range:  "
+	low = gets.chomp.to_i	
+end
+
+range = (high..low)
 answer = rand(range)
 x = 0
 
