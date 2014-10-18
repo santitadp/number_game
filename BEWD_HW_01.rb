@@ -11,7 +11,8 @@ print """
 Welcome to the NUMBER GAME!
 
 You guess a number, and we'll see if it's correct.
-First off, let's pick a range. """
+First off, let's pick a range.
+"""
 
 print "What would you like to be your highest range?  "
 high = gets.chomp.to_i
@@ -25,11 +26,14 @@ while low > high or low == high
 	low = gets.chomp.to_i	
 end
 
-range = (high..low)
+print "How many guesses would you like to have?  "
+chances = gets.chomp.to_i
+
+range = (high - low)
 answer = rand(range)
 x = 0
 
-while x = x + 1 and x <= 5 do
+while x = x + 1 and x <= chances do
 	print "Guess the number:  "
 	guess = gets.chomp.to_i
 	if
