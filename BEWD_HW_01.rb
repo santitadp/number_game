@@ -7,6 +7,12 @@
 # If the guess is correct, then print "NAILED IT!!!". The program must then exit immediately.
 # If the user does not guess the number after 5 guesses, then print "You lose! I win! Womp womp!”
 
+# NEXT IMPROVEMENTS:
+#
+# Ask user whether they would like to play again
+# Fix all the notes as marked below
+# Print the number of chances the user have
+
 print """
 Welcome to the NUMBER GAME!
 
@@ -29,19 +35,22 @@ end
 print "How many guesses would you like to have?  "
 chances = gets.chomp.to_i
 
-range = (high - low)
-answer = rand(range)
+answer = rand(high - low) # This is wrong. It will print out the difference between high and low instead.
+
 x = 0
 
 while x = x + 1 and x <= chances do
 	print "Guess the number:  "
 	guess = gets.chomp.to_i
 	if
+		guess > high or guess < low     # Each of this process takes up one chance.
+		print "Stop goofing around.\n"
+	elsif
 		answer < guess
 		print "Too high!!\n"
 	elsif
 		answer > guess
-		print "Too low!\n"
+		print "Too low!\n"	
 	else
 		print "NAILED IT!!!\n"
 		exit
