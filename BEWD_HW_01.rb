@@ -11,7 +11,7 @@
 #
 # Ask user whether they would like to play again
 # Fix all the notes as marked below
-# Print the number of chances the user have
+# Print the number of chances the user have as they play
 
 print """
 Welcome to the NUMBER GAME!
@@ -35,7 +35,7 @@ end
 print "How many guesses would you like to have?  "
 chances = gets.chomp.to_i
 
-answer = rand(high - low) # This is wrong. It will print out the difference between high and low instead.
+answer = rand(low..high)
 
 x = 0
 
